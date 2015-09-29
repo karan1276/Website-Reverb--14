@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<!-- Stylesheets -->
+
+<link rel="stylesheet" href="The Conundrum.css"/>
+
+<!-- Scripts -->
+<script type="text/javascript" src="countdown (2).js"></script> 
+<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="Page1.js"></script>
+
+  
+<title>Reverb</title>
+
+<script>
+ window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+</script>
+
+</head>
+
+ 
+
+<body onclick="getform()" onmousewheel="wheel()" onload=function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}>
+
+<img src="rvb1.png" style="position:fixed; top:0%;left:38.5%; height:140px; width:300px;" >
+ 
+<span class="timer"> 
+
+<script>
+var test1 = new Countdown({
+                              style     : "flip", 
+                              month	: 3, 
+                              day	: 7, 
+                              hour	: 0,
+                              ampm	: "am",
+                              minute	: 0, 
+                              second	: 0,	
+                              width     : 240,
+                              height    : 50,
+                              padding   : 0,
+                              rangeHi  : "day",	
+                               labels	: {
+                                          font  	: "Arial",
+                                          color 	: "#ffffff",
+                                          weight	: "bold"
+                                          }	
+                         });
+</script>  
+
+</span>
+  
+<form style="background-color: black;">
+  
+  <input type="text" id="tb" autofocus="autofocus" size="1" onkeyup="displayunicode(event); this.select()" style="background-color: black; border:0px solid black; position: absolute; height: 0px; width: 0px;"></input>
+
+</form>
+<div id="footouter" style="visibility: hidden; position:absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(0,0,0,0.5); z-index:999999999;" 
+
+onclick="hidefooter()"> </div>
+
+ <div id="footsponsers" style="position:absolute; left:30%; right:30%; top:20%; bottom:20%;font: 14pt arial; color:white; visibility: hidden; background-color: rgb(0,0,0); z-index: 999999999999; overflow-y:hidden;" >
+  <!--<br><br><center><img src="images/sunburn.jpg" height="140" width="230" style="background-color:#ffffff;display:inline;"></center>-->
+  <br><center><u>TV Partners</u></center><br>
+  <center><img src="images/9xm.png" height="110" width="190" style="background-color:#ffffff;display:inline;">
+  &nbsp;&nbsp;&nbsp;<img src="images/9xo.jpg" height="110" width="190" style="display:inline;"></center>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Online Media Partners</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Goodies Partner</u><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/knowafest.png" height="110" width="190" style="dispaly:inline">&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/donut magic.jpg" height="110" width="190" style="background-color:#ffffff;"><br><br>
+  <center><u>Stall Partners</u></center><br>
+  <center><img src="images/spicyaffair.jpg" height="110" width="190" style="dispaly:inline">&nbsp;&nbsp;&nbsp;
+  <img src="images/cakes & cream.jpg" height="110" width="190" style="dispaly:inline"></center><br>
+  <center><u>Coupon Partners</u></center><br>
+  <center><img src="images/twist.jpg" height="110" width="190" style="dispaly:inline">&nbsp;&nbsp;&nbsp;
+  <img src="images/chocolate room.jpg" height="110" width="190" style="dispaly:inline"> </center>
+  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Fashion Partner</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Healthcare Partners</u><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/pearl.png" height="110" width="190" style="background-color:#ffffff;">
+  &nbsp;&nbsp;&nbsp;<img src="images/aaltramed.png" height="110" width="190" style="background-color:#ffffff;"><br>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Photography Partners</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Mall</u><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/kkp.png" height="110" width="190" style="background-color:#ffffff;">&nbsp;&nbsp;&nbsp;
+  <img src="images/phoenix.png" height="110" width="190" style="background-color:#ffffff;"><br>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Radio partner</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Holiday Partner</u><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<img src="images/radiocity.jpg" height="110" width="190">&nbsp;&nbsp;&nbsp;
+  <img src="images/vt6.png" height="110" width="190" style="background-color:#ffffff;"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Creative Sponsors</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<u>Student Opportunity Partner</u><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<img src="images/saha.jpg" height="110" width="190">
+  &nbsp;&nbsp;&nbsp;<img src="images/twenty19.jpg" height="110" width="190"><br><br><br>
+  <center><img src="images/we.png" height="110" width="190" style="background-color:#ffffff;"></center><br>
+
+<u>Man v/s Food Partner</u><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a href="http://www.rentpitara.com"><img src="rentpitara.jpg" height="110" width="190"></a>
+ </div>
+
+ <div id="footabout" style="position:absolute; left:30%; right:30%; top:20%; bottom:20%; text-align: left; font: 14pt arial; color:white; visibility: hidden; 
+
+background-color:rgb(0,0,0); z-index:999999999999;">
+ <p style="margin-left: 30px;"> Reverb is the annual cultural extravaganza organized by Symbiosis Institute of Technology.
+
+</br></br>Reverb, short for Reverberation, is the undue prolongation of sound in a particular space after the original sound is removed.
+
+
+
+Just like its definition above, Reverb is the Numero Uno place to be, whether it be the jaw-dropping dance sequences, the head banging action of the Battle of the 
+
+Bands, or the electrifying performances @ ProNite, rest assured, you'll be transported into an unforgettable journey where encores are the norm, and your presence will 
+
+never fade away...
+
+</br></br>Come to Reverb...Be Heard! </p>
+
+ </div>
+
+ <div id="footcontact" style="position:absolute; left:30%; right:30%; top:20%; bottom:20%; text-align: left; font: 14pt arial; color:white; visibility: hidden; 
+
+background-color:rgb(0,0,0); z-index:999999999999;">
+  <p style="margin-left: 30px;">Email: info@reverbthefest.in</br></br>CULTURAL SECRETARY: Divya Thanasekaran--9561297697<br/><br/>
+
+CO CULTURAL SECRETARY: Archit Mathur-8551971218<br/><br/>
+
+MEDIA MARKETING: Abhijeet Roy -9860424760<br/><br/>
+
+EVENTS: Avichal Mishra -8879301565 
+
+and Kalpesh Kameshwar-7507229718<br/><br/>
+
+TRANSPORT: Nikhil Nagar-7798990858</p>
+ </div>
+
+
+<div id="outer" class="layer"><img src="new5.jpg" height="126%" width="2650" style="position: absolute; top: -13%; left: -2%"/></div>
+
+<div id="exitfooter" style="height: 30px; width: 30px; text-align:center; position:absolute; left: 68%; top: 18%; background-color:black; color:white; visibility: hidden; z-index:9999999999; border-radius:50%; font-weight:bold; font: 20pt arial; cursor:pointer;" onclick="hidefooter()">X</div>
+
+<div id="inner">
+
+<!-- Page 1 Beginning -->
+
+<div id="page1" class="text">
+
+<div class="openbox" id="box1">
+ <div id="white1">
+ <span style="font:12pt arial black;font-weight:bold;position:absolute;top:-2px;right:-1px;border:2px solid black;height:23px;width:20px;text-align:center;background-color:#b2b2b2;cursor:pointer;opacity:0;" class="x" id="x1" onclick="hide1    ()">X
+ </span>
+ <div class="tabtitles" id="title1"></div>
+        <div class="whitebox" id="tab1">
+        <div class="page1tabs" onclick="open11()">ABOUT</div>
+	
+   	<div style="font:14pt Arial;font-weight:normal;height:315px;width:730px;border:0px groove black;color:white;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:b2b2b2;cursor:auto;" id="div11"></br></br></br><b>Great Bands, Greatest Music on the night of greatest
+
+significance.<br/><br/>A night dedicated to music by artists known over.Its a celebration of extravagant music with jumpy beats and dashy tunes to make you rumble all night.<br/></br> Witness the most spectacular musical night and experience the serenity of mind blowing music and equally amazing performance.</b></div>
+   	</div>   
+ </div>           
+ </div>           
+ 
+ <div class="openbox" id="box2">
+ <div id="white2">
+ <span style="font:12pt arial black;font-weight:bold;position:absolute;top:-2px;right:-1px;border:2px solid  black;height:23px;width:20px;text-align:center;background-color:grey;cursor:pointer;opacity:0;" class="x" id="x2" onclick="hide2 ()">X
+ </span>
+ <div class="tabtitles" id="title2"></div>
+  	<div class="whitebox" id="tab2">
+        <div class="page1tabs" onclick="open12()">ABOUT</div>
+	<div class="page1tabs" onclick="open22()">RULES</div>
+	<div class="page1tabs" onclick="open32()">PRIZES</div>
+        <div class="page1tabs" onclick="open42()">CONTACTS</div>
+   	<div style="font:14pt arial;font-weight:normal;height:315px;width:730px;border-radius:10px;border:0px groove black;color:black;position:absolute;top:150%;left:-6%;text-align: left;border-	radius:10px;visibility:hidden;background-color:white;cursor:auto;" id="div12"><span style="margin-left:22px;font:18pt lucida console black;position:absolute;left:10px;"></br>If fashion is indeed your passion, this one’s for you!</br></br> With creativity oozing out of every design and elegance dripping of every models moves, this year promises to be completely fashionable extravaganza as ever! So here we are once again, hailing all you fashion geeks out there! Do you have what it takes to prove the world!</br></br><b>Entry fee: INR 1000</b></span></div>
+   	<div style="font:14pt Arial;font-weight:normal;height:315px;width:730px;border-radius:10px;border:0px groove black;color:black;position:absolute;top:150%;left:-6%;text-align: left;border-	radius:10px;visibility:hidden;background-color:white;cursor:auto;" id="div22"><span style="margin-left:22px;font:18pt lucida console black;"></br></br></br></br><center><b>Will be discussed during the event.</b></center></span></div>
+   	<div style="font:14pt Arial;font-weight:normal;height:315px;width:730px;border-radius:10px;border:0px groove black;color:black;position:absolute;top:150%;left:-6%;text-align: left;border-	radius:10px;visibility:hidden;background-color:white;cursor:auto;" id="div32"><span style="margin-left:22px;font:18pt lucida console black;"></br></br></br></br><center><b>Prizes: INR 10000 worth!!!</span></div>
+   	<div style="font:14pt Arial;font-weight:normal;height:315px;width:730px;border-radius:10px;border:0px groove black;color:black;position:absolute;top:150%;left:-6%;text-align: left;border-	radius:10px;visibility:hidden;background-color:white;cursor:auto;" id="div42"><span style="margin-left:22px;font:18pt lucida console black;"></br></br></br></br><center><b>Schilka - 7875199729<br/>Nidhi - 9921166065</span></div>
+   	</div>
+   </div>
+   </div>
+
+ <div class="openbox" id="box3">
+ <div id="white3">
+ <span style="font:12pt arial black;font-weight:bold;position:absolute;top:-2px;right:-1px;border:2px solid  black;height:23px;width:20px;text-align:center;background-color:#FF1919;cursor:pointer;opacity:0;" class="x" id="x3" onclick="hide3 ()">X
+ </span>
+ <div class="tabtitles" id="title3"></div>
+   	<div class="whitebox" id="tab3">
+        <div class="page1tabs" onclick="open13()">ABOUT</div>
+	<div class="page1tabs" onclick="open23()">RULES</div>
+	<div class="page1tabs" onclick="open33()">PRIZES</div>
+        <div class="page1tabs" onclick="open43()">CONTACTS</div>
+   	<div style="font:14pt Arial;height:315px;width:730px;border:2px groove black;color:white;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:black;cursor:auto;" id="div13"><span style="text-align:left;margin-left:22px;font:18pt lucida console black;position:absolute;left:0px;"></br>There goes the siren that warns of the air raid Then comes the sound of the guns sending flak Out for the scramble we've got to get airborne. Got to get up for the coming attack.</br></br><b>Entry Fee: Free</b> </span></div>
+   	<div style="font:14pt Arial;height:315px;width:730px;border:2px groove black;color:white;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:black;cursor:auto;" id="div23"><br/><br/><br/><b><center>All standard rules apply. <br/></br>Will be updated soon.</center></b></div>
+   	<div style="font:14pt Arial;height:315px;width:730px;border:2px groove black;color:white;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:black;cursor:auto;" id="div33"><br/><br/><br/><b><center>Prize: 20,000 Rs/- WORTH</center></b></br>
+
+</div>
+   	<div style="font:14pt Arial;height:315px;width:730px;border:2px groove black;color:white;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:black;cursor:auto;" id="div43"></br></br></br><b><center>Email : botb@reverbthefest.in</br></br>Siva - 7387241058</center></b></div>
+   	</div>
+   </div>
+   </div>
+ <div class="openbox" id="box4">
+ <div id="white4">
+ <span style="font:12pt arial black;font-weight:bold;position:absolute;top:-2px;right:-1px;border:2px solid black;height:23px;width:20px;text-align:center;background-color:#FF1919;cursor:pointer;opacity:0;" class="x" id="x4" onclick="hide4()">X
+ </span>
+ <div class="tabtitles" id="title4"></div>
+   	<div class="whitebox" id="tab4">
+        <div class="page1tabs" onclick="open14()">ABOUT</div>
+	<div class="page1tabs" onclick="open24()">RULES</div>
+	<div class="page1tabs" onclick="open34()">PRIZES</div>
+        <div class="page1tabs" onclick="open44()">CONTACTS</div>
+   	<div style="font:14pt Arial;height:315px;width:730px;border:0px groove black;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:white;cursor:auto;" id="div14"><span style="text-align:left;margin-left:22px;font:18pt lucida console black;position:absolute;left:0px;"></br></br>Beats.. Drop.. Bass..<br/> Move the Crowd in all the way..!! 
+Watch out.. Surprise is coming.</span>
+</div>
+  	<div style="font:14pt Arial;height:315px;width:730px;border:0px groove black;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:white;cursor:auto;" id="div24"></br></br></br><center><b>Entries will be judged and eliminated by evaluating audio files.
+	4 Best entries will be selected to play in finals.</b></center></div>
+   	<div style="font:14pt Arial;height:315px;width:730px;border:0px groove black;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:white;cursor:auto;" id="div34"></br></br></br><center><b>Prize Money: INR 3000</b></center></div>
+   	<div style="font:14pt Arial;height:315px;width:730px;border:0px groove black;position:absolute;top:150%;left:-7%;border-radius:10px;visibility:hidden;background-color:white;cursor:auto;" id="div44"></br></br></br><center><b>Avichal Mishra - 8879301565<br/>Kalpesh Kameshwar - 7507229718</b></center></div>
+ 	</div>
+ </div>
+ </div>
+
+
+
+ <div id="banner1" onclick="move1()"><img src="MusicMania.jpg"/></div>
+ <div id="banner2" onclick="move2()"><img src="FashionShow.jpg"/></div>
+ <div id="banner3" onclick="move3()"><img src="BattleoftheBands.jpg"/></div>
+ <div id="banner4" onclick="move4()"><img src="DJ.png"/></div>
+ </div>
+
+<!-- PAGE 1 Ends -->
+
+<!-- Enter Page 2 -->
+<div id="page2" class="text">
+
+  <div id="bwrap" style="visibility: visible">
+
+   <div id="bubble1" class="bubbles"><img src="deb2.jpg" style="border-radius: 50%; height:190px; width:190px;" /><div id="bt1" onclick="showextempo()"><br /><br />Extempo Bate</div></div>
+   <div id="bubble2" class="bubbles"><img src="manfood.jpg" style="border-radius: 50%; height:190px; width:190px;" /><div id="bt1" onclick="showmanfood()"><br /><br />Man VS Food</div></div>
+
+   <div id="bubble3" class="bubbles"><img src="quiz.jpg" style="border-radius: 50%; height:190px; width:190px;" /><div id="bt1" onclick="showquiz()"><br /><br /> Quiz</div></div>
+
+   <div id="bubble4" class="bubbles"><img src="mic.jpg" style="border-radius: 50%; height:190px; width:190px;" /><div id="bt1" onclick="showvocal()"><br />Vocal Adrenaline</div></div>
+
+   <div id="bubble5" class="bubbles"><img src="treasure.jpg" style="border-radius: 50%; height:190px; width:190px;" /><div id="bt1" onclick="showtreasure()"><br /><br />Treasure Hunt</div></div>
+
+   <div id="bubble6" class="bubbles"><img src="madads.jpg" style="border-radius: 50%; height:190px; width:190px;" /><div id="bt1" onclick="showmadads()"><br /><br />Mad Ads</div></div>
+
+   <div id="bubble7" class="bubbles"><img src="mani.jpg" style="border-radius: 50%; height:190px; width:190px;" /><div id="bt1" onclick="showmani()">  <br /> <br /> Masquerade</div> </div>
+
+   <div id="bubble8" class="bubbles"><img src="personality.jpg" style="border-radius: 50%; height:190px; width:190px;" /><div id="bt1" onclick="showpersonality()"><br />Mr and Miss Personality</div></div>
+
+  </div>
+
+  <div id="eventout" onclick="hideevents()"></div>
+
+   <div id="exitevents" onclick="hideevents()">X</div>
+
+   <div id="vocal" class="eventin"> 
+
+    <div id="about" onclick="showaboutv()" class="pageTwoButtons">ABOUT
+
+    </div>
+
+    <div id="rules" onclick="showrulesv()" class="pageTwoButtons">RULES
+    </div>
+
+    <div id="prizes" onclick="showprizesv()" class="pageTwoButtons">PRIZES
+    </div>
+
+    <div id="contact" onclick="showcontactv()" class="pageTwoButtons">CONTACT US
+    </div> 
+
+
+     <span id="abouttextv" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left;       visibility: hidden">
+      EVENT: Vocal Adrenaline <br /><br />
+      There is magic in everyone. Some have it in their Vocal chords…so bring out the magic in you. Let your voice mesmerize the mass. Come, sing your heart and get people trippy. <br /><br />
+      REGISTRATION FEE: INR 100
+     </span>
+
+     <span id="rulestextv" class="eventtext" style="position: absolute; top: 100px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; height:300px; visibility: hidden; overflow-y:scroll;"> 
+     <span style="font-size: 14pt;"><u>Round 1(Eliminations)</u></span> <br />
+     Each participant will sing Hindi/English Song without any back track.<br />
+     Instrumental participants will play there instruments and qualify the eliminations<br />
+     Time Limits: 3minutes. <br />
+
+     <span style="font-size: 14pt;"><u>Round 2</u></span><br />
+     The participant will be given an artist for English songs and for Hindi Songs. They will be given the artists name on the day of                       eliminations.Back tracks will be bought by the participants.<br />
+     For Instrumental category particular bands name is given, the participant needs to prepare a song and play.<br />
+     Time Limit: 5 – 7 minutes.<br />
+
+     <span style="font-size: 14pt;"><u>Round 3</u></span><br />
+     The participants of hindi and English category will be given an artists name on the spot and they need to sing.<br />
+     For Instrumental category particular bands name is given, the participant needs to prepare a song and play.<br />
+     Time limit: 2-3 mins.<br />
+     The participants of Instrumental category will be given sponsors name, they need to make a jingle and sing it using there instrument.<br>
+     Time limit: 1 min.<br/>
+     The participants will get 20 mins to prepare for this round.
+     </span>
+
+     <span id="prizestextv" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      2500 Rs/-   English Song.<br />
+	2500 Rs/-   Hindi/Regional Song.<br />
+	2500 Rs/-   Instrumental
+     </span>
+
+     <span id="contacttextv" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+     TULIKA PRIYA SINHA - +91 8600222490
+     </span>
+
+
+   </div>
+
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+   <div id="extempo" class="eventin">
+   
+    <div id="about" onclick="showaboute()" class="pageTwoButtons">ABOUT
+    </div>
+
+    <div id="rules" onclick="showrulese()" class="pageTwoButtons">RULES
+    </div>
+
+    <div id="prizes" onclick="showprizese()" class="pageTwoButtons">PRIZES
+    </div>
+
+    <div id="contact" onclick="showcontacte()" class="pageTwoButtons">CONTACT US
+    </div> 
+
+     <span id="abouttexte" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      EVENT: Extempo Bate (Debate and Extempore) <br /><br />
+      REGISTRATION FEE: 100 Rs/-
+     </span>
+
+     <span id="rulestexte" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      Apart from their content, participants will also be judged on Gestures, Persuasiveness, Eye Contact, Enthusiasm etc.
+     </span>
+
+     <span id="prizestexte" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); visibility: hidden">
+      Prize: 2000 Rs/- (Two Thousand Rupees Only).
+     </span>
+
+     <span id="contacttexte" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      AVICHAL MISHRA - 8879301565<br/>KALPESH KAMESHWAR - 7507229718
+     </span>
+
+   </div>
+
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+   <div id="quiz" class="eventin">
+
+    <div id="about" onclick="showaboutq()" class="pageTwoButtons">ABOUT
+    </div>
+
+    <div id="rules" onclick="showrulesq()" class="pageTwoButtons">RULES
+    </div>
+
+    <div id="prizes" onclick="showprizesq()" class="pageTwoButtons">PRIZES
+    </div>
+
+    <div id="contact" onclick="showcontactq()" class="pageTwoButtons">CONTACT US
+    </div> 
+
+     <span id="abouttextq" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden"> EVENT: QUIZ <br /><br />REGISTRATION Per Team: 200 Rs/- (2 participant) <br /><br />
+      Venue: SIT Campus
+     </span>
+
+     <span id="rulestextq" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      All standard rules are applicable<br /><br />
+     </span>
+
+     <span id="prizestextq" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); visibility: hidden">
+      Rs. 2000 (Two thousand only)
+     </span>
+
+     <span id="contacttextq" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align:left; visibility: hidden">
+      AVICHAL MISHRA - 8879301565<br/>KALPESH KAMESHWAR - 7507229718
+     </span>
+
+
+   </div>
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+   <div id="madads" class="eventin">
+    
+    <div id="about" onclick="showaboutmd()" class="pageTwoButtons">&nbsp;ABOUT
+    </div>
+
+    <div id="rules" onclick="showrulesmd()" class="pageTwoButtons">RULES
+    </div>
+
+    <div id="prizes" onclick="showprizesmd()" class="pageTwoButtons">PRIZES
+    </div>
+
+    <div id="contact" onclick="showcontactmd()" class="pageTwoButtons">CONTACT US
+    </div> 
+
+     <span id="abouttextmd" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      EVENT: Mad Ads <br /><br />
+      REGISTRATION FEE: 50 Rs /-
+     </span>
+
+     <span id="rulestextmd" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: center; text-align: left; visibility: hidden">
+       You will be judged on the overall concept of the ad as well as your ability to attract the audience<br /><br />
+       Existing ads cannot be copied
+     </span>
+
+     <span id="prizestextmd" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); visibility: hidden">
+      Prize: 1000 Rs /- (Thousand Rupees Only).
+     </span>
+
+     <span id="contacttextmd" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      ANAMIKA - 8879247172
+     </span>
+
+
+   </div>
+
+<!-- ----------------------------------------------------------------------------------------------------- -->
+
+   <div id="personality" class="eventin">
+
+    <div id="about" onclick="showaboutp()" class="pageTwoButtons">ABOUT
+    </div>
+
+    <div id="rules" onclick="showrulesp()" class="pageTwoButtons">RULES
+    </div>
+
+    <div id="prizes" onclick="showprizesp()" class="pageTwoButtons">PRIZES
+    </div>
+
+    <div id="contact" onclick="showcontactp()" class="pageTwoButtons">CONTACT US
+    </div> 
+
+     <span id="abouttextp" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      EVENT: Mr. and Miss. Personality <br /><br />
+      In house Competition, Entries Restricted <br /> to SIT students<br /><br />
+      Result’s declaration on the 3 day (9th FEB)<br /> with Prize Distribution Ceremony.
+
+     </span>
+
+     <span id="rulestextp" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      Multiple Rounds Spread Across 2 Days of Reverb’14
+     </span>
+
+     <span id="prizestextp" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left;  visibility: hidden">
+     </span>
+
+     <span id="contacttextp" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0);text-align: left; visibility: hidden">
+      AVICHAL MISHRA - 8879301565<br/>KALPESH KAMESHWAR - 7507229718     </span>
+
+   </div>
+
+<!-- -------------------------------------------------------------------------------------------------------- -->
+
+   <div id="treasure" class="eventin">
+
+    <div id="about" onclick="showaboutt()" class="pageTwoButtons">ABOUT
+    </div>
+
+    <div id="rules" onclick="showrulest()" class="pageTwoButtons">RULES
+    </div>
+
+    <div id="prizes" onclick="showprizest()" class="pageTwoButtons">PRIZES
+    </div>
+
+    <div id="contact" onclick="showcontactt()" class="pageTwoButtons">CONTACT US
+    </div> 
+
+     <span id="abouttextt" class="eventtext" style="position: absolute; top: 100px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+       EVENT: TALAASH <br /><br />
+       Codes, ciphers, epitaphs, maps, fireworks, shrieks and cries in the death of the night: we leave no stone unturned. <br /><br />
+       An event where the participants have to search the campus for clues, to ultimately unearth the hidden angels and devils treasure.<br /><br />
+       No of participants per team : 2 <br /> <br />
+       REGISTRATION Per Team: 100 Rs/- <br /><br />
+       Venue: SIT Campus
+     </span>
+
+     <span id="rulestextt" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      Rules to be explained on the spot.
+     </span>
+
+     <span id="prizestextt" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">  Prizes: Exciting Vouchers for a Trip to THAILAND!!!
+     </span>
+
+     <span id="contacttextt" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      SUSHANT PAWAR - 9960904128
+     </span>
+
+
+   </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+
+   <div id="facepaint" class="eventin"> 
+
+     <div id="about" onclick="showaboutf()" class="pageTwoButtons">ABOUT
+    </div>
+
+    <div id="rules" onclick="showrulesf()" class="pageTwoButtons">RULES
+    </div>
+
+    <div id="prizes" onclick="showprizesf()" class="pageTwoButtons">PRIZES
+    </div>
+
+    <div id="contact" onclick="showcontactf()" class="pageTwoButtons">CONTACT US
+    </div> 
+
+     <span id="abouttextf" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      EVENT: Facepainting/Manicure <br /><br />
+      REGISTRATION FEE: 100 Rs/- (team of 2)<br /><br />
+      Team of Two Members <br /><br />
+     </span>
+
+     <span id="rulestextf" class="eventtext" style="position: absolute; top: 100px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+
+      Theme will be given at the venue and the team members have to paint on the theme given in 30 minutes. <br /> <br />
+      All material will be provided at the venue. <br /> <br />
+      Participant have to bring their personal materials. <br /> <br />
+      In case of any similarities between the designs of two teams, both the teams are liable to be disqualified. <br /> <br />
+      Copying from photographs, newspapers or any article can also lead to disqualification. <br /> <br />
+      Judge’s decision will be final. <br />
+   
+     </span>
+
+     <span id="prizestextf" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">  Prize: 500 Rs/- each. 
+     </span>
+
+     <span id="contacttextf" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0);text-align: left; visibility: hidden">
+      SAALONI - 8390203367
+     </span>
+
+
+   </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+
+   <div id="manfood" class="eventin">
+
+    <div id="about" onclick="showaboutm()" class="pageTwoButtons">ABOUT
+    </div>
+
+    <div id="rules" onclick="showrulesm()" class="pageTwoButtons">RULES
+    </div>
+
+    <div id="prizes" onclick="showprizesm()" class="pageTwoButtons">PRIZES
+    </div>
+
+    <div id="contact" onclick="showcontactm()" class="pageTwoButtons">CONTACT US
+    </div> 
+
+     <span id="abouttextm" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left; visibility: hidden">
+      EVENT: Man VS Food<br /><br />
+      Love Eating? Fantasize about Food? Well here is an event for all
+      the Hoggers!<br /> <span style="font-size: 14pt;">Eat till you drop!</span><br /><br />
+      REGISTRATION: 50 Rs/-<br>
+      Sponsored by : <a target="_blank" href="http://www.rentpitara.com">Rent Pitara</a>
+     </span>
+
+     <span id="rulestextm" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); text-align: left;" visibility: hidden">
+      Person takes the Least time to finish his/her meals wins! <br /><br />
+      No of participants per team : 1.
+     </span>
+
+     <span id="prizestextm" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0); visibility: hidden">
+      500 Rs/- (Five Hundred only)
+     </span>
+
+     <span id="contacttextm" class="eventtext" style="position: absolute; top: 150px; font: 12pt arial black; left:40px;color: rgb(26, 13, 0);text-align: left;visibility: hidden">
+      AVICHAL MISHRA - 8879301565<br/>KALPESH KAMESHWAR - 7507229718
+     </span>
+
+
+   </div>
+  </div>
+ 
+
+
+<!-- END of PAGE 2 -->
+
+<!-- Beginning of Page 3 -->
+
+ <div id="page3">
+  <div id="moveit">
+  <section class="container" id="cont1"  style="margin: 150px 430px" > 	<!--margin : Y axis, X axis-->
+    <div class="card" id="card1">
+      <figure id="front1">Antakshari</figure>
+      <img class="back" src="antakshri.jpg" height="100" width="250">
+    </div>
+  </section>
+  <section class="container" id="cont2" style="margin: -250px 690px">
+    <div class="card" id="card2">
+      <figure id="front2">Board Mania</figure>
+      <img class="back" src="boardmania.png" height="100" width="250">
+    </div>
+  </section>
+  <section class="container" id="cont3" style="margin: 260px 430px">
+    <div class="card" id="card3">
+      <figure id="front3">Bust-A-Move</figure>
+      <img class="back" src="bam.jpg" height="100" width="250">
+    </div>
+  </section>
+   <section class="container" id="cont4" style="margin: -360px 690px">
+    <div class="card" id="card4">
+      <figure id="front4">Entrepreneurship</figure>
+      <img class="back" src="ent2.jpg" height="100" width="250">
+    </div>
+  </section>
+   <section class="container" id="cont5" style="margin: 370px 430px" >
+    <div class="card" id="card5">
+      <figure id="front5">GullyCricket/Futsal</figure>
+      <img class="back" src="futsal.jpg" height="100" width="250">
+    </div>
+  </section>
+  <section class="container" id="cont6" style="margin: -470px 690px">
+    <div class="card" id="card6">
+      <figure id="front6">PhotoBuzz/Short Film</figure>
+      <img class="back" src="photo.jpg" height="100" width="250">
+    </div>
+  </section>
+  <section class="container" id="cont7" style="margin: 480px 430px">
+    <div class="card" id="card7">
+      <figure id="front7">Mock Stock</figure>
+      <img class="back" src="sm.jpg" height="100" width="250">
+    </div>
+  </section>
+   <section class="container" id="cont8" style="margin: -580px 690px">
+    <div class="card" id="card8">
+      <figure id="front8">Tambola</figure>
+      <img class="back" src="tambola.png" height="100" width="250">
+    </div>
+  </section>
+ </div>
+ <div id="e1" class="events">
+ <img class="closeit" src="close.jpg" height="20" width="20">
+ <p class="e1title">Antakshari</p>
+ <ul id="e1ul">
+ <li id="e11" ><span class="eventsoptions" id="#e111">About</span></li>
+ <li id="e12"><span class="eventsoptions" id="#e112">Rules</span></li> 
+ <li id="e13"><span class="eventsoptions" id="#e113">Prizes</span></li>
+ <li id="e14"><span class="eventsoptions" id="#e114">Contact</span></li>
+ </ul>
+ <p class="e0" id="e111">•In house competition<br>•Teams of SIT students, Faculty and staff will compete<br>
+ •Each team will consist of 4 members.</p>
+ <p class="e0" id="e112">Standard Rules Applied.</p>
+ <p class="e0" id="e113">Prizes will be given on the spot.</p>
+ <p class="e0" id="e114">RAMA PRASAD - +91 8308845033</p> 
+ </div>
+ <div id="e2" class="events">
+ <img class="closeit" src="close.jpg" height="20" width="20">
+ <p class="e1title">BoardMania</p>
+ <ul id="e2ul">
+ <li id="e21"><span class="eventsoptions" id="#e221">About</span></li>
+ <li id="e22"><span class="eventsoptions" id="#e222">Rules</span></li> 
+ <li id="e23"><span class="eventsoptions" id="#e223">Prizes</span></li> 
+ <li id="e24"><span class="eventsoptions" id="#e224">Contact</span></li>
+ </ul>
+ <p class="e0" id="e221">Games played will be<br>•Chess<br>•Carrom<br>•Table Tennis<br><br>Entry Fee<br>•INR 50 (Chess and Carrom)<br>•INR 50 (Table Tennis)</p>
+ <p class="e0" id="e222">Standard Rules will be applied.</p>
+ <p class="e0" id="e223">Prizes:<br>•INR 500 (Chess and Carrom)<br>•INR 1500 (Table Tennis)</p>
+ <p class="e0" id="e224">ABHISHEK NAYAK - +91 8805817924</p>
+ </div>
+<div id="e3" class="events">
+ <img class="closeit" src="close.jpg" height="20" width="20">
+ <p class="e1title">BustAMove</p>
+ <ul id="e3ul">
+ <li id="e31"><span class="eventsoptions" id="#e331">About</span></li>
+ <li id="e32"><span class="eventsoptions" id="#e332">Rules</span></li>  
+ <li id="e33"><span class="eventsoptions" id="#e333">Prizes</span></li> 
+ <li id="e34"><span class="eventsoptions" id="#e334">Contact</span></li>
+ </ul>
+ <p class="e0" id="e331">•Members: minimum of 4 members required from each team, and maximum 15 [due to stage limitations].<br>
+•Teams should not take longer than 2 min to set-up.<br>
+•Music: Competitors are requested to submit the required music in CD’s and PEN DRIVE only.<br>
+•ENTRY FEE : For Solo Dance : INR 100<br> Time : 3-4 minutes<br>
+•ENTRY FEE : For Group Dance : INR 500<br> Time : 5-8 minutes
+</p>
+ <p class="e0" id="e332">Time: <br>Group: 8 minutes <br>Solo: 5 minutes</p>
+ <p class="e0" id="e333">Prizes: INR 7000 (GROUP) <br> INR 3000 (SOLO)</p>
+ <p class="e0" id="e334">NEEKITA SAMANT - +91 9503932310</p>
+ </div>		
+<div id="e4" class="events">
+ <img class="closeit" src="close.jpg" height="20" width="20">
+ <p class="e1title">EntrepreneurOfSIT</p>
+ <ul id="e4ul">
+ <li id="e41"><span class="eventsoptions" id="#e441">About</span></li>
+ <li id="e42"><span class="eventsoptions" id="#e442">Rules</span></li> 
+ <li id="e43"><span class="eventsoptions" id="#e443">Prizes</span></li> 
+ <li id="e44"><span class="eventsoptions" id="#e444">Contact</span></li>
+ </ul>
+ <p class="e0" id="e441">•Problem Statement to be given at the starting of the event. E.g. Teams of two are given Virtual Money that they use in a Business plan like selling 
+
+Lemonade, during Reverb’14.<br>•Prime Motive of Event is to develop a business oriented thinking among students and giving them a brief idea of market scenario of profit and 
+
+loss.</p>
+ <p class="e0" id="e442">RULES WILL BE DISCUSSED DURING THE EVENT.</p>
+ <p class="e0" id="e443">PRIZES WILL BE GIVEN ON THE SPOT.</p>
+ <p class="e0" id="e444">AVICHAL MISHRA - +91 8879301565<br>  
+ KALPESH KAMESHWAR - +91 7507229718</p>
+ </div>
+<div id="e5" class="events">
+ <img class="closeit" src="close.jpg" height="20" width="20">
+ <p class="e1title">GullyCricket/Futsal</p>
+ <ul id="e5ul">
+ <li id="e51"><span class="eventsoptions" id="#e551">About</span></li>
+ <li id="e52"><span class="eventsoptions" id="#e552">Rules</span></li> 
+ <li id="e53"><span class="eventsoptions" id="#e553">Prizes</span></li> 
+ <li id="e54"><span class="eventsoptions" id="#e554">Contact</span></li>
+ </ul>
+ <p class="e0" id="e551">Registration fee: INR 500 per (Team of 6 players)<br>
+  No. of players in per team (5 on field and 3 subs)</p>
+ <p class="e0" id="e552">Standard Rules applied.</p>
+ <p class="e0" id="e553">Prizes : INR 2500 per team.</p>
+ <p class="e0" id="e554">ABHISHEK VIJAY - +91 8605096043</p>
+ </div>
+<div id="e6" class="events">
+ <img class="closeit" src="close.jpg" height="20" width="20">
+ <p class="e1title">PhotoBuzz/Short Film Making</p>
+ <ul id="e6ul">
+ <li id="e61"><span class="eventsoptions" id="#e661">About</span></li>
+ <li id="e62"><span class="eventsoptions" id="#e662">Rules</span></li> 
+ <li id="e63"><span class="eventsoptions" id="#e663">Prizes</span></li> 
+ <li id="e64"><span class="eventsoptions" id="#e664">Contact</span></li>
+ </ul>
+ <p class="e0" id="e661"><u>Photobuzz</u><br>•Photos to be taken during the Days of Reverb’14.<br>
+•By submitting an entry, the entrant guarantees that they retain all rights to the photos submitted and grant Reverb’13 the permission to copy, publish (in print or online), use and reuse the photos in any manner at all, in whole or in part, with other materials.<br>
+•Entry Fee : INR 100<br><br>
+<u>Short Film Making</u><br>
+•The participants have to come in to SIT and shoot Reverb’14 on the first day and have to submit their film in pen drives.<br>
+•Entry Fee : INR 100
+</p>
+ <p class="e0" id="e662">RULES WILL BE DISCUSSED DURING THE EVENT.</p>
+ <p class="e0" id="e663">PRIZES WILL BE GIVEN ON THE LAST DAY.</p>
+ <p class="e0" id="e664">Photobuzz - GAURAV SINGH - +91 7743875799<br>
+ Short Flim Making - SIDDHARTH ADARSH - +91 9167002445</p>
+ </div>
+<div id="e7" class="events">
+ <img class="closeit" src="close.jpg" height="20" width="20">
+ <p class="e1title">WolfOfStockMarket</p>
+ <ul id="e7ul">
+ <li id="e71"><span class="eventsoptions" id="#e771">About</span></li>
+ <li id="e72"><span class="eventsoptions" id="#e772">Rules</span></li> 
+ <li id="e73"><span class="eventsoptions" id="#e773">Prizes</span></li> 
+ <li id="e74"><span class="eventsoptions" id="#e774">Contact</span></li>
+ </ul>
+ <p class="e0" id="e771">•A team can comprise of either an individual or a pair.<br>
+•Winner will be decided on terms of score in prelims and overall profit.<br>
+•Entry Fee : INR 100</p>
+ <p class="e0" id="e772">RULES WILL BE DISCUSSED DURING THE EVENT.</p>
+ <p class="e0" id="e773">Prizes : INR 1000</p>
+ <p class="e0" id="e774">AVICHAL MISHRA - +91 8879301565<br>
+ KALPESH KAMESHWAR - +91 7507229718</p>
+ </div>
+<div id="e8" class="events">
+ <img class="closeit" src="close.jpg" height="20" width="20">
+ <p class="e1title">Tambola</p>
+ <ul id="e8ul">
+ <li id="e81"><span class="eventsoptions" id="#e881">About</span></li>
+ <li id="e82"><span class="eventsoptions" id="#e882">Rules</span></li> 
+ <li id="e83"><span class="eventsoptions" id="#e883">Prizes</span></li> 
+ <li id="e84"><span class="eventsoptions" id="#e884">Contact</span></li>
+ </ul>
+ <p class="e0" id="e881">•The most amazing event which everyone loves to play. You know the game pretty well and you would love playing it. The game is nothing but Housie. Enjoy 
+
+the music and the excitement while cancelling the numbers on your tickets. Full House mates!<br>•Entry Fee : INR 100</p>
+ <p class="e0" id="e882">•No of participants: 1</p>
+ <p class="e0" id="e883">Prizes will be given on the spot</p>
+ <p class="e0" id="e884">AVICHAL MISHRA - +91 8879301565<br>
+ KALPESH KAMESHWAR - +91 7507229718</p>
+ </div>
+
+</div>
+
+
+
+<!-- Page 3 Ends -->
+
+<!-- Page 4 BEGINS!! -->
+
+ <div id="page4" class="text">
+<a target="_blank" href="http://reverbthefest.in/comit/index.html"><img src="1.JPG" height="150" width="320" style="position:absolute; left:200px; top:200px;"></a>
+<a target="_blank" href="http://reverbthefest.in/entc/index.html"><img src="entc/PS.jpg" height="150" width="320" style="position:absolute; left:800px; top:200px;"></a>
+<a target="_blank" href="http://reverbthefest.in/civil/index.html"><img src="civil/Images/logo2.png" height="150" width="320" style="position:absolute; left: 500px; top: 400px;"></a>
+</div>
+
+
+ </div>
+
+<!-- Page 4 Ends -->
+
+<!-- Footer Begins -->
+
+<div class="footer" onclick="getform()">
+<div class="outerbox" id="links">
+
+<a target="_blank" href="https://docs.google.com/a/sitpune.edu.in/forms/d/1Ij6HVkR0QhyvrOpTDch0uWPdnC4GglKPkIveHtgAsug/viewform" id="links">
+<div id="one" onclick="getform()">
+REGISTER
+</div>
+</a>
+
+<div id="one" onclick="scrollToTech()" style="cursor: pointer;">
+TECHFEST
+</div>
+
+<div id="one" onclick="getsponsersf()" style="cursor:pointer;">
+SPONSORS
+</div>
+
+<a target="_blank" href="Reverb Transport.xlsx" id="links">
+<div id="one" onclick="getform()">
+TRANSPORT
+</div>
+</a>
+
+<div id="one" onclick="getaboutf()" style="cursor:pointer;">
+ABOUT
+</div>
+
+<div id="one" onclick="getcontactf()" style="cursor:pointer;">
+CONTACT US
+</div>
+
+</div>
+  
+</div>
+  
+  <div id="pop1" class="pop-up" onclick="getform()">
+    <div class="popBox">
+      <div class="popScroll">
+       </div>
+
+      <a href="#links" class="close" onclick="getform()"><span>Back to links</span></a>
+    </div>
+
+    <a href="#links" class="lightbox" onclick="getform()">Back to links</a>
+  </div>
+
+  <div id="pop2" class="pop-up">
+    <div class="popBox">
+      <div class="popScroll">
+        <p style="font:14pt Arial;text-align:left;">Reverb is the annual cultural extravaganza organized by Symbiosis Institute of Technology.
+
+</br></br>Reverb, short for Reverberation, is the undue prolongation of sound in a particular space after the original sound is removed.
+
+
+
+Just like its definition above, Reverb is the Numero Uno place to be, whether it be the jaw-dropping dance sequences, the head banging action of the Battle of the Bands, or the electrifying performances @ ProNite, rest assured, you'll be transported into an unforgettable journey where encores are the norm, and your presence will never fade away...
+
+</br></br>Come to Reverb...Be Heard!
+</p>
+      </div>
+      <a href="#links" class="close"><span>Back to links</span></a>
+    </div>
+    <a href="#links" class="lightbox">Back to links</a>
+  </div>
+
+  <div id="pop4" class="pop-up">
+    <div class="popBox">
+      <div class="popScroll">
+       <p>Email: info@reverbthefest.in</br></br>CULTURAL SECRETARY: Divya Thanasekaran--9561297697<br/><br/>
+
+CO CULTURAL SECRETARY: Archit Mathur-8551971218<br/><br/>
+
+MEDIA MARKETING: Abhijeet Roy -9860424760<br/><br/>
+
+EVENTS: Avichal Mishra -8879301565 
+
+and Kalpesh Kameshwar-7507229718<br/><br/>
+
+TRANSPORT: Nikhil Nagar-7798990858</p>
+      </div>
+      <a href="#links" class="close"><span>Back to links</span></a>
+    </div>
+    <a href="#links" class="lightbox">Back to links</a>
+  </div>
+
+<!-- Footer Ends -->
+
+<!-- S o c i a l   M e d i a   B u t t o n s -->
+
+<nav id="social" style="position:absolute;top:2%;right:0%;width:200px;height:45px;">
+
+
+
+   
+<div id="menuFacebook" style="width:45px;float:left;position:absolute;left:0px;">
+	<div style="height:45px;"><a href="" target="popup" onClick="wopen('https://www.facebook.com/sitreverb', 'facebook', 500, 550); return false;"><img src="fb_icon.png" height="41px" width="41px" alt="Facebook" id="face" style="border-radius:50%;"/></a></div>
+</div>
+
+<div id="menuTwitter" style="width:45px;float:left;position:absolute;left:50px;">
+	<div style="height:45px;"><a href="" target="popup" onClick="wopen('http://twitter.com/sit_Reverb', 'twitter', 500, 550); return false;"><img src="twitter_icon.png" height="40px" width="40px" alt="Twitter" id="twitter" style="border-radius:50%;"/></a></div>
+</div>
+
+<div id="menuYoutube" style="width:45px;float:left;position:absolute;left:100px;">
+	<div style="height:45px;"><a href="" target="popup" onClick="wopen('https://youtube.com/user/ReverbPune/', 'youtube', 500, 550); return false;" ><img src="ytb_icon.png" height="41px" width="41px" alt="Youtube" id="youtube" style="border-radius:50%;"/></a></div>
+</div>
+
+<div id="menuInstagram" style="width:45px;float:left;position:absolute;left:150px;">
+	<div style="height:45px;width:20px;"><a href="" target="popup" onClick="wopen('http://www.instagram.com/reverb_14', 'instagram', 500, 550); return false;"><img src="insta9.jpg" height="41px" width="41px" alt="Instagram" id="insta" style="border-radius:50%;"/></a></div>
+</div>
+
+</nav>
+
+<!-- End of Social Media Buttons -->
+
+<!-- Function for opening in New Window (Box) -->
+
+<script>
+function MM_openBrWindow(theURL,winName,features) 
+{
+window.open(theURL,winName,features);
+}
+
+function wopen(url, name, w, h)
+{
+  //Fudge factors for window decoration space.
+  //In my tests these work well on all platforms & browsers.
+  w += 32;
+  h += 96;
+  wleft = (screen.width - w) / 2;
+  wtop = (screen.height - h) / 2;
+  // IE5 and other old browsers might allow a window that is
+  // partially offscreen or wider than the screen. Fix that.
+  // (Newer browsers fix this for us, but let's be thorough.)
+  if (wleft < 0) {
+    w = screen.width;
+    wleft = 0;
+  }
+  if (wtop < 0) {
+    h = screen.height;
+    wtop = 0;
+  }
+  var win = window.open(url,name,
+    'width=' + w + ', height=' + h + ', ' +
+    'left=' + wleft + ', top=' + wtop + ', ' +
+    'location=no, menubar=no, ' +
+    'status=no, toolbar=no, scrollbars=yes, resizable=yes');
+  // Just in case width and height are ignored
+  win.resizeTo(w, h);
+  // Just in case left and top are ignored
+  win.moveTo(wleft, wtop);
+  win.focus();
+}
+</script>
+
+
+<!-- Left and Right Navigation B u t t o n s -->
+
+<button id="scrollLeft" onclick="scrollL()" style="cursor:pointer; border-radius:50%; opacity:0.4; z-index:31313; position:fixed; top:40%;"  ><img src="arrow_left (1).png" ></button>
+<button id="scrollRight" onclick="scrollR()" style="cursor:pointer; border-radius:50%; opacity:0.4; z-index:31313; position:fixed; top:40%; right:0%"><img src="arrow_right (1).png "></button>
+
+<script type="text/javascript" src="Tiles.js"></script>
+<script type="text/javascript" src="Functions.js"></script>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9575814; 
+var sc_invisible=1; 
+var sc_security="083c4dee"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free hit
+counters" href="http://statcounter.com/free-hit-counter/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/9575814/0/083c4dee/1/"
+alt="free hit counters"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+
+
+</html>
